@@ -1,0 +1,55 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>PFL</groupId>
+	<artifactId>PFL</artifactId>
+	<version>0.0.1-PFL</version>
+	<packaging>jar</packaging>
+	<name>PFL Codebase</name>
+	<description>The core of all the PFL Code</description>
+	<build>
+		<sourceDirectory>src</sourceDirectory>
+		<resources>
+			<resource>
+				<directory>js</directory>
+				<excludes>
+					<exclude>**/*.java</exclude>
+				</excludes>
+			</resource>
+		</resources>
+		<plugins>
+			<plugin>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.8.1</version>
+				<configuration>
+					<release>15</release>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+	<repositories>
+<!-- 		<repository>
+			<id>jakarta.oss.sonatype.org</id>
+			<name>Jakarta OSS Sonatype Staging</name>
+			<url>https://jakarta.oss.sonatype.org/content/repositories/staging</url>
+		</repository>
+		-->
+	</repositories>
+	<dependencies>
+		<dependency>
+			<groupId>org.mariadb.jdbc</groupId>
+			<artifactId>mariadb-java-client</artifactId>
+			<version>2.7.4</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-lang3</artifactId>
+			<version>3.0</version>
+		</dependency>
+		<dependency>
+			<groupId>org.simpleflatmapper</groupId>
+			<artifactId>sfm-sql2o</artifactId>
+			<version>8.2.3</version>
+		</dependency>
+
+	</dependencies>
+</project>

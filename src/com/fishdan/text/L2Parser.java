@@ -194,7 +194,7 @@ public class L2Parser {
 
 								String methodName = "setType";
 								invokeMethod(value, fish, methodName);
-								data.put(methodName, fo)
+								//data.put(methodName, fo)
 							}
 							else {//yes type, yes field -- this is a 1-n sort of object from the person
 								//find the object in data
