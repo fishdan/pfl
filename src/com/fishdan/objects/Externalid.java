@@ -14,7 +14,7 @@ import java.io.Serializable;
  * @author Telosys Tools Generator
  *
  */
-public class Externalid extends FishObject implements Serializable {
+public class Externalid extends FishObject implements Personal {
 
 
     //----------------------------------------------------------------------
@@ -26,7 +26,7 @@ public class Externalid extends FishObject implements Serializable {
     // ENTITY DATA FIELDS 
     //----------------------------------------------------------------------    
     private Integer    personid          ;
-    private Integer    xid          ;
+    private String    xid          ;
     private String     type         ;
 
     //----------------------------------------------------------------------
@@ -54,10 +54,10 @@ public class Externalid extends FishObject implements Serializable {
     //----------------------------------------------------------------------
     // GETTERS & SETTERS FOR "DATA FIELDS"
     //----------------------------------------------------------------------
-    public void setXid( Integer xid ) {
-        this.xid = xid ;
+    public void setXid(String id) {
+    	this.xid=id;
     }
-    public Integer getXid() {
+    public String getXid() {
         return this.xid;
     }
 
@@ -68,12 +68,27 @@ public class Externalid extends FishObject implements Serializable {
         return this.type;
     }
 
+    /**
+	 * @return the personid
+	 */
+	public Integer getPersonid() {
+		return personid;
+	}
 
+	/**
+	 * @param personid the personid to set
+	 */
+	public void setPersonid(Integer personid) {
+		this.personid = personid;
+	}
+
+    
     //----------------------------------------------------------------------
     // GETTERS & SETTERS FOR LINKS
     //----------------------------------------------------------------------
 
-    //----------------------------------------------------------------------
+
+	//----------------------------------------------------------------------
     // toString METHOD
     //----------------------------------------------------------------------
     public String toString() { 

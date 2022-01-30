@@ -14,18 +14,19 @@ import java.io.Serializable;
  * @author Telosys Tools Generator
  *
  */
-public class Email extends FishObject implements Serializable {
+public class Email extends FishObject implements Personal {
 
 
     //----------------------------------------------------------------------
     // ENTITY PRIMARY KEY 
     //----------------------------------------------------------------------
-    private String     email        ;
+	private Integer id;
 
     //----------------------------------------------------------------------
     // ENTITY DATA FIELDS 
     //----------------------------------------------------------------------    
-    private Integer    personid     ;
+    private String     email        ;
+	private Integer    personid     ;
     private String     type         ;
     private String     status       ;
 
@@ -93,6 +94,18 @@ public class Email extends FishObject implements Serializable {
         sb.append("|");
         sb.append(status);
         return sb.toString(); 
-    } 
+    }
+
+	@Override
+	public Integer getId() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void setId(Integer id) {
+		// TODO Auto-generated method stub
+		
+	} 
 
 }

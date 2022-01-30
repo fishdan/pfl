@@ -14,7 +14,7 @@ import java.io.Serializable;
  * @author Telosys Tools Generator
  *
  */
-public class Detail extends FishObject implements Serializable {
+public class Detail extends FishObject{
 
 
     //----------------------------------------------------------------------
@@ -93,6 +93,7 @@ public class Detail extends FishObject implements Serializable {
         sb.append("|");
         sb.append(value);
         return sb.toString(); 
-    } 
+    }
+
 
 }

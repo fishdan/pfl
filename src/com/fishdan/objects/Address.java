@@ -14,10 +14,10 @@ import java.io.Serializable;
  * @author Telosys Tools Generator
  *
  */
-public class Address extends FishObject implements Serializable {
+public class Address extends FishObject implements Personal {
 
 
-    //----------------------------------------------------------------------
+	//----------------------------------------------------------------------
     // ENTITY PRIMARY KEY 
     //----------------------------------------------------------------------
     private Integer    id           ;
@@ -153,6 +153,6 @@ public class Address extends FishObject implements Serializable {
         sb.append("|");
         sb.append(type);
         return sb.toString(); 
-    } 
+    }
 
 }

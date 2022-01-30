@@ -14,7 +14,7 @@ import java.io.Serializable;
  * @author Telosys Tools Generator
  *
  */
-public class LinkPersonDetail extends FishObject implements Serializable {
+public class LinkPersonDetail extends FishObject implements Personal {
 
 
     //----------------------------------------------------------------------
@@ -26,7 +26,7 @@ public class LinkPersonDetail extends FishObject implements Serializable {
     // ENTITY DATA FIELDS 
     //----------------------------------------------------------------------    
     private Integer    personid     ;
-    private Integer    issueid      ;
+    private Integer    detailid      ;
     private Integer    create       ;
     private String     value        ;
     private Integer    score        ;
@@ -63,11 +63,11 @@ public class LinkPersonDetail extends FishObject implements Serializable {
         return this.personid;
     }
 
-    public void setIssueid( Integer issueid ) {
-        this.issueid = issueid ;
+    public void setDetailid( Integer detailid ) {
+        this.detailid = detailid ;
     }
-    public Integer getIssueid() {
-        return this.issueid;
+    public Integer getDetailid() {
+        return this.detailid;
     }
 
     public void setCreate( Integer create ) {
@@ -105,7 +105,7 @@ public class LinkPersonDetail extends FishObject implements Serializable {
         sb.append("|");
         sb.append(personid);
         sb.append("|");
-        sb.append(issueid);
+        sb.append(detailid);
         sb.append("|");
         sb.append(create);
         sb.append("|");

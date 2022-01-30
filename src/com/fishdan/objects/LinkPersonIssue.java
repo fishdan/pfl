@@ -14,7 +14,7 @@ import java.io.Serializable;
  * @author Telosys Tools Generator
  *
  */
-public class LinkPersonIssue extends FishObject implements Serializable {
+public class LinkPersonIssue extends FishObject implements Personal {
 
 
     //----------------------------------------------------------------------

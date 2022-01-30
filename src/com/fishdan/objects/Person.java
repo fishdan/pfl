@@ -5,9 +5,12 @@
  */
 package com.fishdan.objects;
 
-import java.io.Serializable;
 import java.lang.reflect.Field;
+import java.text.ParseException;
+import java.util.Date;
 
+import org.apache.commons.lang3.time.DateFormatUtils;
+import org.apache.commons.lang3.time.DateUtils;
 
 /**
  * Domain class for entity "Person"
@@ -15,7 +18,7 @@ import java.lang.reflect.Field;
  * @author Telosys Tools Generator
  *
  */
-public class Person extends FishObject implements Serializable {
+public class Person extends FishObject{
 
     //----------------------------------------------------------------------
     // ENTITY PRIMARY KEY 
@@ -47,7 +50,19 @@ public class Person extends FishObject implements Serializable {
     //----------------------------------------------------------------------
     // GETTER & SETTER FOR "KEY FIELD(S)"
     //----------------------------------------------------------------------
+    /**
+	 * @return the id
+	 */
+	public Integer getId() {
+		return id;
+	}
 
+	/**
+	 * @param id the id to set
+	 */
+	public void setId(Integer id) {
+		this.id = id;
+	}
 
     //----------------------------------------------------------------------
     // GETTERS & SETTERS FOR "DATA FIELDS"
@@ -55,7 +70,9 @@ public class Person extends FishObject implements Serializable {
     public void setPrefix( String prefix ) {
         this.prefix = prefix ;
     }
-    public String getPrefix() {
+
+
+	public String getPrefix() {
         return this.prefix;
     }
 
@@ -88,7 +105,14 @@ public class Person extends FishObject implements Serializable {
     }
 
     public void setBirthdate( String birthdate ) {
-        this.birthdate = birthdate ;
+    	Date dob;
+		try {
+			dob = DateUtils.parseDate(birthdate,"mm/dd/yyyy","m/d/yyyy","yyyymmdd");
+	        this.setBirthdate(Integer.parseInt(DateFormatUtils.format(dob, "yyyymmdd")));
+		} catch (ParseException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
     }
     public void setBirthdate( Integer birthdate ) {
         this.birthdate = birthdate ;

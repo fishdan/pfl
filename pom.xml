@@ -27,7 +27,7 @@
 		</plugins>
 	</build>
 	<repositories>
-<!-- 		<repository>
+		<!-- 		<repository>
 			<id>jakarta.oss.sonatype.org</id>
 			<name>Jakarta OSS Sonatype Staging</name>
 			<url>https://jakarta.oss.sonatype.org/content/repositories/staging</url>
@@ -35,6 +35,12 @@
 		-->
 	</repositories>
 	<dependencies>
+		<!-- https://mvnrepository.com/artifact/org.sql2o/sql2o -->
+		<dependency>
+			<groupId>org.sql2o</groupId>
+			<artifactId>sql2o</artifactId>
+			<version>1.6.0</version>
+		</dependency>
 		<dependency>
 			<groupId>org.mariadb.jdbc</groupId>
 			<artifactId>mariadb-java-client</artifactId>
